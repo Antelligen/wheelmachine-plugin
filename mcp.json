@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "wheelmachine": {
+      "url": "https://api.wheelmachine.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:WHEELMACHINE_API_KEY}"
+      }
+    }
+  }
+}

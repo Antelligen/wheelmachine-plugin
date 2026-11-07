@@ -1,0 +1,39 @@
+{
+  "name": "wheelmachine",
+  "version": "0.2.0",
+  "description": "Make, fork and run Wheelmachine machines, open their apps and work with your repositories, from your agent: Wheelmachine's MCP server and skills for its tools.",
+  "author": {
+    "name": "Antelligen",
+    "email": "team@antelligen.com",
+    "url": "https://wheelmachine.ai"
+  },
+  "homepage": "https://docs.wheelmachine.ai/mcp.html",
+  "repository": "https://github.com/Antelligen/wheelmachine-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "wheelmachine",
+    "cloud",
+    "machines",
+    "sandbox",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./codex-mcp.json",
+  "interface": {
+    "displayName": "Wheelmachine",
+    "shortDescription": "Computers in the cloud for your agent",
+    "longDescription": "Wheelmachine is computers in the cloud for people and their agents, made usually in about a second and paid by the second. This plugin gives your agent Wheelmachine's MCP server and skills to make, fork and run machines, open their apps and work with your repositories. Keep an API key as WHEELMACHINE_API_KEY where the agent runs.",
+    "developerName": "Antelligen",
+    "category": "Coding",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://wheelmachine.ai",
+    "privacyPolicyURL": "https://wheelmachine.ai/privacy/",
+    "termsOfServiceURL": "https://wheelmachine.ai/terms/",
+    "brandColor": "#e8601f",
+    "composerIcon": "./assets/mark.svg",
+    "logo": "./assets/mark.svg"
+  }
+}

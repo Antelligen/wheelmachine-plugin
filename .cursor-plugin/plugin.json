@@ -1,0 +1,20 @@
+{
+  "name": "wheelmachine",
+  "version": "0.2.0",
+  "description": "Make, fork and run Wheelmachine machines, open their apps and work with your repositories, from your agent: Wheelmachine's MCP server and skills for its tools.",
+  "author": {
+    "name": "Antelligen",
+    "email": "team@antelligen.com"
+  },
+  "homepage": "https://docs.wheelmachine.ai/mcp.html",
+  "repository": "https://github.com/Antelligen/wheelmachine-plugin",
+  "license": "Apache-2.0",
+  "keywords": [
+    "wheelmachine",
+    "cloud",
+    "machines",
+    "sandbox",
+    "mcp"
+  ],
+  "logo": "assets/mark.svg"
+}
