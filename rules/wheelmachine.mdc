@@ -7,7 +7,7 @@ alwaysApply: false
 
 - Give what you make a `name` and `labels`, and look with `list_machines` before making another: a call that timed out may have made it.
 - Never ask for a Git token or put one in a machine. Try plain https git; if it is refused, point the person to the dashboard's Code page.
-- Work on a branch: `main`, `master` and `release/**` are protected, and a person opens the pull request or merge request.
+- Work on a branch: `main`, `master` and `release/**` are protected. `open_pull_request` opens the pull request or merge request, and a person merges it.
 - A machine's commands can read the secrets it was given. No tool takes a secret's value.
 - Running time is charged by the second: pause, stop or delete what is not in use, and delete only when nothing of it is needed.
 - A web app's `link` lets one browser in once: give it to the person, and do not keep it.

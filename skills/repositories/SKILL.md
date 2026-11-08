@@ -37,9 +37,8 @@ admins choose otherwise, so work on a branch and push that:
     git switch -c fix-login-test
     git push -u origin fix-login-test
 
-Changes reach a protected branch through a pull request on GitHub, or a merge request on GitLab. A person opens it: there
-is no token in the machine to open one with, and a machine does not carry `gh` or `glab`. The first push of a branch prints
-a link for it, from GitHub or GitLab. Give that link to the person.
+Changes reach a protected branch through a pull request on GitHub, or a merge request on GitLab, and a person merges it. To open
+one, see the wheelmachine-pull-requests skill.
 
 ## What a refusal means
 
@@ -53,13 +52,16 @@ a link for it, from GitHub or GitLab. Give that link to the person.
 - `this team's machines may push only to feature/** or fix/*`: a team's push rule. Name your branch to fit it, or ask for the
   team's **Push rules** to change.
 - `not pushed: another ref in this push was refused`: a push goes whole or not at all. Fix the other ref it names.
-- `this machine's internet does not reach github.com`, with a 403: see below.
+- `this machine's internet does not reach github.com: of it, it reaches only its team's repositories`, with a 403, or
+  `this machine's internet is closed: of github.com it reaches only its team's repositories`: see below.
 
-## Its internet must reach the host
+## Its internet and its code
 
-An open machine always reaches it. A machine with a list does only when the list names the host (`github.com`,
-`gitlab.com` or a company's own GitLab). A closed machine never does. See the wheelmachine-secrets-and-internet skill, and
-ask before you change a machine's internet.
+Every machine reaches its team's repositories, whatever its internet. Anything else there - a public repository, one its
+team was not given, Git LFS - only an open machine reaches, or one whose list names the host (`github.com`, `gitlab.com` or
+a company's own GitLab). A closed machine can still push to its team's repositories, and a push can start that
+repository's own CI, which runs outside the machine with its own internet. See the wheelmachine-secrets-and-internet skill,
+and ask before you change a machine's internet.
 
 ## A company's own GitLab
 

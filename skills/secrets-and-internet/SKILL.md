@@ -27,8 +27,11 @@ Do not ask for a Git token: see the wheelmachine-repositories skill.
 start.
 
 - `open`: the whole internet.
-- `closed`: no internet, though name lookups and some sites we host still work.
+- `closed`: no internet in or out and no name lookups: a public port answers only as a private one. A push to your team's
+  repositories still goes, and can start that repository's own CI, which runs outside the machine with its own internet.
 - `allowed`: only what `allow` lists - domain names, exact or with a leading `*.` for every name under it, for HTTP and
   HTTPS, and IPv4 or IPv6 ranges for other ports.
+
+Whatever it is, your team's repositories and folders still work where given.
 
 A person may have closed a machine on purpose: ask before you open it or add to its list.

@@ -60,6 +60,7 @@ Any other agent, or setting it up by hand: https://docs.wheelmachine.ai/mcp.html
 | `desktop` | See a machine's desktop as a picture, and work it |
 | `secrets-and-internet` | What a machine's commands get, and what it may reach |
 | `repositories` | Clone and push with no token in the machine |
+| `pull-requests` | Open a pull request or merge request from a machine |
 | `clean-up` | Pause, stop or delete what is not in use |
 | `when-a-tool-fails` | Read a failed call and act on it |
 

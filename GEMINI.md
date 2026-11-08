@@ -23,7 +23,8 @@ or give a person a desktop or a code editor to open in their browser.
   for good, with its files and backups - what is done with.
 - In a machine, plain https git reaches the repositories its team was given, with no token in it: `git clone
   https://github.com/acme/api.git`. Never ask for a Git token or add one. If git refuses, the person fixes it on the dashboard's
-  Code page. `main`, `master` and `release/**` are protected, so push a branch and give the person the link git prints.
+  Code page. `main`, `master` and `release/**` are protected, so push a branch. `list_repositories` says what a machine reaches, and
+  `open_pull_request` opens a pull request from the branch, or on GitLab answers a line of git to run: people merge it.
 - A failed tool answers the API's `code` and `detail`: `forbidden` (the key does not allow it), `not_found`,
   `rate_limited` (wait `retry_after_s`), `payment_required` (the account cannot spend now), `invalid_request`.
 - A call that timed out may still have done its work, and a command may still be running: look with `list_machines` before

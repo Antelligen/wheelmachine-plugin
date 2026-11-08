@@ -1,6 +1,6 @@
 {
   "name": "wheelmachine",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Make, fork and run Wheelmachine machines, open their apps and work with your repositories, from your agent, from Gemini CLI.",
   "contextFileName": "GEMINI.md",
   "settings": [

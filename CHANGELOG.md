@@ -3,6 +3,11 @@
 Wheelmachine's plugin and Gemini CLI extension: its MCP server, set up in one step, and skills for its tools. Each
 release is tagged `plugin-v<version>`.
 
+## 0.4.0
+
+- An agent opens the pull request itself. A new skill, `pull-requests`, teaches `list_repositories` and `open_pull_request`: what each
+  host answers and what each refusal means. The rule file and the extension's context name them too.
+
 ## 0.3.0
 
 - The skill for a machine's desktop says more of what the docs say: how far a picture can be drawn down before a model misreads
