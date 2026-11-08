@@ -3,7 +3,7 @@
 Wheelmachine's MCP server, `https://api.wheelmachine.ai/mcp`, and skills for its tools: make, fork and run computers in the
 cloud, open their apps, see and work their desktops and work with your repositories, from your agent.
 
-It needs an API key: make one on the dashboard's **Agents & API** page or with `wm keys create`. The key is sent to
+It needs an API key: make one on the dashboard's **Agents** page or with `wm keys create`. The key is sent to
 `https://api.wheelmachine.ai` alone.
 
 ## Install
@@ -43,6 +43,12 @@ The skills alone, for any agent that takes them:
 
 Any other agent, or setting it up by hand: https://docs.wheelmachine.ai/mcp.html
 
+## Ask your agent
+
+    Make a Wheelmachine machine, run uname -a in it, then delete it.
+    Make a machine, clone my repository in it, run its tests and tell me what failed.
+    Fork my machine, try the upgrade on the fork, and keep the original as it was.
+
 ## Skills
 
 | Skill | For |
@@ -56,6 +62,12 @@ Any other agent, or setting it up by hand: https://docs.wheelmachine.ai/mcp.html
 | `repositories` | Clone and push with no token in the machine |
 | `clean-up` | Pause, stop or delete what is not in use |
 | `when-a-tool-fails` | Read a failed call and act on it |
+
+## What it runs and sends
+
+The plugin is settings and text: it runs nothing on your computer. When your agent uses one of its tools, the tool's arguments
+and your key go to `https://api.wheelmachine.ai`, and what comes back goes to your agent and its model. Machines are charged by
+the second while they run, from your Wheelmachine account.
 
 ## Licence and privacy
 

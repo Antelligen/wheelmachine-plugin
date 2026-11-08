@@ -1,6 +1,6 @@
 {
   "name": "wheelmachine",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Make, fork and run Wheelmachine machines, open their apps and work with your repositories, from your agent: Wheelmachine's MCP server and skills for its tools.",
   "author": {
     "name": "Antelligen",

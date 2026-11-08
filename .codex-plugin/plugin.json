@@ -1,6 +1,6 @@
 {
   "name": "wheelmachine",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Make, fork and run Wheelmachine machines, open their apps and work with your repositories, from your agent: Wheelmachine's MCP server and skills for its tools.",
   "author": {
     "name": "Antelligen",
@@ -21,19 +21,25 @@
   "mcpServers": "./codex-mcp.json",
   "interface": {
     "displayName": "Wheelmachine",
-    "shortDescription": "Computers in the cloud for your agent",
-    "longDescription": "Wheelmachine is computers in the cloud for people and their agents, made usually in about a second and paid by the second. This plugin gives your agent Wheelmachine's MCP server and skills to make, fork and run machines, open their apps and work with your repositories. Keep an API key as WHEELMACHINE_API_KEY where the agent runs.",
+    "shortDescription": "Cloud computers for your agent",
+    "longDescription": "Wheelmachine is computers in the cloud for people and their agents. This plugin gives your agent Wheelmachine's MCP server and skills, to make, fork and run machines, open their apps, see and work their desktops, and work with your repositories. It is for people who want their agent to build, test and run things away from their own computer. It needs a Wheelmachine account and an API key, kept as WHEELMACHINE_API_KEY where the agent runs. A command may run for up to 10 minutes, and a machine's desktop is Linux.",
     "developerName": "Antelligen",
-    "category": "Coding",
+    "category": "Developer Tools",
     "capabilities": [
       "Read",
       "Write"
     ],
     "websiteURL": "https://wheelmachine.ai",
+    "supportURL": "https://wheelmachine.ai/contact/",
     "privacyPolicyURL": "https://wheelmachine.ai/privacy/",
     "termsOfServiceURL": "https://wheelmachine.ai/terms/",
     "brandColor": "#e8601f",
-    "composerIcon": "./assets/mark.svg",
-    "logo": "./assets/mark.svg"
+    "defaultPrompt": [
+      "Make a Wheelmachine machine, run uname -a in it, then delete it.",
+      "Make a machine, clone my repository in it, run its tests and tell me what failed.",
+      "Fork my machine, try the upgrade on the fork, and keep the original as it was."
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
   }
 }

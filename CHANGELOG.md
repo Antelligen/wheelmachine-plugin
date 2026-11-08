@@ -3,6 +3,17 @@
 Wheelmachine's plugin and Gemini CLI extension: its MCP server, set up in one step, and skills for its tools. Each
 release is tagged `plugin-v<version>`.
 
+## 0.3.0
+
+- The skill for a machine's desktop says more of what the docs say: how far a picture can be drawn down before a model misreads
+  places, which `format` to ask for, that a paused machine is woken and charged for a picture or a click, who may work a screen,
+  and how much one call and one key may do.
+- The README gives three things to ask your agent, and says what the plugin runs and sends. The `.codex-plugin` manifest
+  carries what a directory of plugins reads: a short description of at most 30 characters, a category, a support address,
+  the three things to ask and a square icon; its marketplace lists the plugin under the same category. `assets/logo.png`, the
+  mark on a white plate, is for a directory that asks for a logo on one.
+- The README names the dashboard's Agents page, where a key for the plugin is made.
+
 ## 0.2.0
 
 - The plugin has a repository of its own, `Antelligen/wheelmachine-plugin`. Add its marketplace at this address: the plugin's
