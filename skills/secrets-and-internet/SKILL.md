@@ -11,8 +11,8 @@ No tool takes a secret's value. A person sets values, with `wm secrets set` or t
 
 - `list_secrets` names the account's secrets, each with the machines given it, and never a value.
 - `give_secrets` says which of them a machine gets, by name. The names given take the place of the ones it had; an empty
-  list takes them all away. Each must be set already. It needs a key with the `cloud:secrets:write` scope: if it answers
-  `forbidden`, ask the person to give them.
+  list takes them all away. Each must be set already. It needs a key with the `cloud:secrets:write` scope, which a sign-in
+  through the browser never holds: if it answers `forbidden`, ask the person to give them.
 - `secrets` on `create_machine` gives them from the start, with the same scope.
 
 Every command in the machine gets each one as an environment variable of that name, so a command there can read it. A

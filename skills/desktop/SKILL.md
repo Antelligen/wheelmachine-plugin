@@ -23,15 +23,15 @@ The desktop is off until something asks for it, and its first start can take up 
 `create_machine` when you know you will want it. A paused machine is woken for a picture or a click, and runs and is charged
 as for a command, so pause it again when you are done.
 
-It needs a key that may run commands (`cloud:machines:exec`). In an organisation, only the person who holds a machine works it.
+It needs the scope to run commands (`cloud:machines:exec`). In an organisation, only the person who holds a machine works it.
 Someone who watches it gets pictures of the screen they watch, with nothing woken or turned on, and never its pointer or keys.
 
 ## What can go wrong
 
 - One `use_screen` holds at most 64 actions, with 4096 characters typed and 25 seconds of waits, and has 30 seconds with the
   desktop once it is up. Split longer work into several calls.
-- A key has at most 4 calls on screens going at once. Over that, or when many pictures are being taken, the answer is 429 with
-  `retry_after_s`, and nothing was done: wait that long and ask again.
+- A sign-in or a key has at most 4 calls on screens going at once. Over that, or when many pictures are being taken, the answer
+  is 429 with `retry_after_s`, and nothing was done: wait that long and ask again.
 - Letters of every language and emoji can be typed. Characters that aren't on an English keyboard, such as accents, Russian,
   Chinese or emoji, can come out wrong. Take a picture after typing them to check; a password box can't be checked this way.
 - A failed `use_screen` says how many of its actions were done: look at the screen before you try again.

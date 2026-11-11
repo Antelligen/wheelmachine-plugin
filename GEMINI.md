@@ -1,9 +1,9 @@
 # Wheelmachine machines
 
 The `wheelmachine` MCP tools make, fork and run Wheelmachine machines - computers in the cloud, made usually in about
-a second and paid by the second - and open their apps, in the account of the API key they were set up with. Use them when work
-needs a machine of its own: to build or test code away from this computer, run something long, try a change on a copy,
-or give a person a desktop or a code editor to open in their browser.
+a second and paid by the second - and open their apps, in the account the person signed in to in their browser, or that
+of the API key they were set up with. Use them when work needs a machine of its own: to build or test code away from this
+computer, run something long, try a change on a copy, or give a person a desktop or a code editor to open in their browser.
 
 - A machine is named by its id (`m_...`) or its name. File paths begin `home/` or `work/` (where commands start).
 - `create_machine` with a `name` and `labels` to find it by again; it answers once the machine runs.
@@ -25,9 +25,10 @@ or give a person a desktop or a code editor to open in their browser.
   https://github.com/acme/api.git`. Never ask for a Git token or add one. If git refuses, the person fixes it on the dashboard's
   Code page. `main`, `master` and `release/**` are protected, so push a branch. `list_repositories` says what a machine reaches, and
   `open_pull_request` opens a pull request from the branch, or on GitLab answers a line of git to run: people merge it.
-- A failed tool answers the API's `code` and `detail`: `forbidden` (the key does not allow it), `not_found`,
+- A failed tool answers the API's `code` and `detail`: `forbidden` (the sign-in or the key does not allow it), `not_found`,
   `rate_limited` (wait `retry_after_s`), `payment_required` (the account cannot spend now), `invalid_request`.
 - A call that timed out may still have done its work, and a command may still be running: look with `list_machines` before
   calling `create_machine` or `fork_machine` again, or you can make a second machine.
 - Long output is cut, with `truncated` true, and a command with huge output may be reported as failed though it ran: write
   big output to a file, and do not just run the command again.
+- `search_docs` looks in Wheelmachine's docs and reads a page of them: use it rather than guess a flag, a route or a limit.

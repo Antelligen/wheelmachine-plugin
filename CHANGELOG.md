@@ -3,6 +3,15 @@
 Wheelmachine's plugin and Gemini CLI extension: its MCP server, set up in one step, and skills for its tools. Each
 release is tagged `plugin-v<version>`.
 
+## 0.5.0
+
+- You sign in through your browser, and the plugin asks for no key. Each agent opens Wheelmachine in your browser, you choose
+  Allow, and it is connected: the README gives each agent's line for it.
+- No agent's file names a key any more. A key you gave an earlier version is no longer used: sign in, or add the server
+  yourself with the key's header, as the README's "With a key instead" says. That is the way for CI, or a computer where no
+  browser can open.
+- The skills say what an agent signed in this way holds: it never gives machines secrets, and `whoami` names its scopes.
+
 ## 0.4.0
 
 - An agent opens the pull request itself. A new skill, `pull-requests`, teaches `list_repositories` and `open_pull_request`: what each

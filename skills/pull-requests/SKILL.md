@@ -24,7 +24,7 @@ Work on a branch and push it. Then give `open_pull_request`:
 - `base`, the branch to merge them into. It may be protected.
 - `title`, one line, and `body`, what it changes and how you tested it. `draft` true opens it as a draft.
 
-Only the person who holds the machine may ask, with a key that may run commands.
+Only the person who holds the machine may ask, signed in or with a key that may run commands.
 
 ## On GitHub
 
